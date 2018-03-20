@@ -1,9 +1,0 @@
-Magasins : Produits (Prix, Facets, Etagere)
-
-Commerciaux : 	Liste de magasins à visiter
-				Visites faites (Produits -> Prix, Facets, Etagere, Absent)
-
-
-Un magasin peut être visité par plusieurs commerciaux
-
-https://developer.mozilla.org/fr/Apps/Build/Hors-ligne
