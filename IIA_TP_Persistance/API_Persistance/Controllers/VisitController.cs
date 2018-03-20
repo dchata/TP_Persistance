@@ -31,7 +31,7 @@ namespace API_Persistance.Controllers
         [Produces(typeof(string))]
         public IActionResult SetVisits(string commercial, [FromBody]string content)
         {
-            var result = _visitService.SetVisit();
+            var result = _visitService.SetVisit(commercial, content);
 
             if (result != null)
                 return Ok();
