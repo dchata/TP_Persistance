@@ -1,4 +1,4 @@
-﻿using API_Persistance.Model;
+﻿using API_Persistance.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;

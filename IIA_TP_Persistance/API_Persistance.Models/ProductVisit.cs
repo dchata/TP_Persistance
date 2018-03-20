@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace API_Persistance.Model
+namespace API_Persistance.Models
 {
     public class ProductVisit : Product
     {
