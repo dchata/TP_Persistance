@@ -21,13 +21,9 @@ namespace API_Persistance.Models
         #endregion
 
         #region Constructors
-        public ProductVisit(int id, float price, int facets, int rack, bool missing)
+        public ProductVisit()
         {
-            this.id = id;
-            this.price = price;
-            this.facets = facets;
-            this.rack = rack;
-            Missing = missing;
+
         }
         #endregion
     }

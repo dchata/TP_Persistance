@@ -8,12 +8,18 @@ namespace API_Persistance.Models
     {
         #region Properties
         private int Id;
+        private string Name;
         private float Price;
         private int Facets;
         private int Rack;
         #endregion
 
         #region Access
+        public string name
+        {
+            get { return Name; }
+            set { Name = value; }
+        }
         public int rack
         {
             get { return Rack; }

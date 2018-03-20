@@ -11,9 +11,27 @@ namespace API_Persistance.Models
         private int Id;
         private DateTime? Date;
         private List<ProductVisit> Products;
+        private bool Finished;
+        private Shop Shop;
+        private Commercial Commercial;
         #endregion
 
         #region Access
+        public Commercial commercial
+        {
+            get { return Commercial; }
+            set { Commercial = value; }
+        }
+        public Shop shop
+        {
+            get { return Shop; }
+            set { Shop = value; }
+        }
+        public bool finished
+        {
+            get { return Finished; }
+            set { Finished = value; }
+        }
         public List<ProductVisit> products
         {
             get { return Products; }
@@ -33,11 +51,9 @@ namespace API_Persistance.Models
         #endregion
 
         #region Constructors
-        public Visit(int id, DateTime? date, List<ProductVisit> products)
+        public Visit()
         {
-            Id = id;
-            Date = date;
-            Products = products;
+
         }
         #endregion
     }

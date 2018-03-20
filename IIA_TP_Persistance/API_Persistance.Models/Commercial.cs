@@ -37,13 +37,6 @@ namespace API_Persistance.Models
         public Commercial()
         {
         }
-
-        public Commercial(int id, string lname, string fname)
-        {
-            Id = id;
-            LastName = lname;
-            FirstName = fname;
-        }
         #endregion
     }
 }

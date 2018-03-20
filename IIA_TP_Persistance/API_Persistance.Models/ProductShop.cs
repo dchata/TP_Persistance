@@ -7,5 +7,12 @@ namespace API_Persistance.Models
 {
     public class ProductShop : Product
     {
+        private Shop Shop;
+
+        public Shop shop
+        {
+            get { return Shop; }
+            set { Shop = value; }
+        }
     }
 }
