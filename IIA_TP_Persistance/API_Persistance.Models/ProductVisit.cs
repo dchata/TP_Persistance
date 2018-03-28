@@ -11,6 +11,7 @@ namespace API_Persistance.Models
         #region Properties
         private bool Missing;
         private bool Saved;
+        private Visit Visit;
         #endregion
 
         #region Access
@@ -21,6 +22,7 @@ namespace API_Persistance.Models
         }
 
         public bool saved { get => Saved; set => Saved = value; }
+        public Visit visit { get => Visit; set => Visit = value; }
         #endregion
 
         #region Constructors
