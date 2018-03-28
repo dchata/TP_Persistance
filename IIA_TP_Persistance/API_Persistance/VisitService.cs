@@ -25,9 +25,7 @@ namespace API_Persistance
         public virtual Visit SetVisit(string commercial, string content)
         {
             var result = DecryptString(content, commercial);
-
-            //result.
-
+            
             return new Visit();
         }
 
