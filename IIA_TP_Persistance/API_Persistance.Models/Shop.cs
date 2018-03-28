@@ -8,6 +8,7 @@ namespace API_Persistance.Models
     {
         private int Id;
         private string Name;
+        private List<ProductShop> ProductsShop;
 
         public string name
         {
@@ -21,5 +22,6 @@ namespace API_Persistance.Models
             set { Id = value; }
         }
 
+        public List<ProductShop> productShops { get => ProductsShop; set => ProductsShop = value; }
     }
 }

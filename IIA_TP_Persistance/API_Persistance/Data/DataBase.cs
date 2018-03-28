@@ -25,7 +25,36 @@ namespace API_Persistance.Data
                     shop = new Shop
                     {
                         id = 1,
-                        name = "E. Leclerc"
+                        name = "E. Leclerc",
+                        productShops = new List<ProductShop>
+                        {
+                            new ProductShop
+                            {
+                                id = 1,
+                                name = "Rhum",
+                                facets = 2,
+                                price = (float)14.00,
+                                rack = 2
+                            },
+
+                            new ProductShop
+                            {
+                                id = 2,
+                                name = "Chips Lays",
+                                facets = 4,
+                                price = (float)2.00,
+                                rack = 3
+                            },
+
+                            new ProductShop
+                            {
+                                id = 3,
+                                name = "Nuggets Père Dodu",
+                                facets = 2,
+                                price = (float)3.00,
+                                rack = 1
+                            }
+                        }
                     },
                     commercial = new Commercial
                     {
@@ -33,44 +62,64 @@ namespace API_Persistance.Data
                         lastName = "Truc",
                         firstName = "Dylan"
                     },
-                    products = new List<ProductVisit>
+                    products = new List<ProductVisit>()
                     {
-                        //new ProductVisit
-                        //{
-                        //    id = 1,
-                        //    name = "Chips Lays",
-                        //    price = (float)12.00,
-                        //    facets = 2,
-                        //    rack = 1,
-                        //    missing = true
-                        //},
-                        //new ProductVisit
-                        //{
-                        //    id = 2,
-                        //    name = "Chips Vico",
-                        //    price = (float)15.00,
-                        //    facets = 3,
-                        //    rack = 2,
-                        //    missing = false
-                        //},
-                        //new ProductVisit
-                        //{
-                        //    id = 3,
-                        //    name = "Rhum",
-                        //    price = (float)5.00,
-                        //    facets = 1,
-                        //    rack = 1,
-                        //    missing = true
-                        //}
-                    }
+                            new ProductVisit
+                            {
+                                id = 1,
+                                name = "Rhum"
+                            },
+
+                            new ProductVisit
+                            {
+                                id = 2,
+                                name = "Chips Lays"
+                            },
+
+                            new ProductVisit
+                            {
+                                id = 3,
+                                name = "Nuggets Père Dodu"
+                            }
+                        }
                 },
+
                 new Visit
                 {
                     id = 2,
                     shop = new Shop
                     {
                         id = 2,
-                        name = "Carrefour"
+                        name = "Carrefour",
+                        productShops = new List<ProductShop>
+                        {
+                            new ProductShop
+                            {
+                                id = 4,
+                                name = "Captain Morgan",
+                                facets = 2,
+                                price = (float)14.00,
+                                rack = 2
+                            },
+
+                            new ProductShop
+                            {
+                                id = 5,
+                                name = "Vodka Poliakov",
+                                facets = 4,
+                                price = (float)15.00,
+                                rack = 3
+                            },
+
+                            new ProductShop
+                            {
+                                id = 6,
+                                name = "Glace Magnum",
+                                facets = 2,
+                                price = (float)5.00,
+                                rack = 1
+                            }
+                        }
                     },
                     commercial = new Commercial
                     {
@@ -78,35 +127,25 @@ namespace API_Persistance.Data
                         lastName = "Gege",
                         firstName = "JM"
                     },
-                    products = new List<ProductVisit>
+                    products = new List<ProductVisit>()
                     {
-                        //new ProductVisit
-                        //{
-                        //    id = 4,
-                        //    name = "Steak",
-                        //    price = (float)12.90,
-                        //    facets = 2,
-                        //    rack = 1,
-                        //    missing = true
-                        //},
-                        //new ProductVisit
-                        //{
-                        //    id = 5,
-                        //    name = "Chips Lays",
-                        //    price = (float)15.50,
-                        //    facets = 3,
-                        //    rack = 2,
-                        //    missing = false
-                        //},
-                        //new ProductVisit
-                        //{
-                        //    id = 6,
-                        //    name = "Tomates",
-                        //    price = (float)5.75,
-                        //    facets = 1,
-                        //    rack = 1,
-                        //    missing = true
-                        //}
+                        new ProductVisit
+                            {
+                                id = 4,
+                                name = "Captain Morgan"
+                            },
+
+                            new ProductVisit
+                            {
+                                id = 5,
+                                name = "Vodka Poliakov"
+                            },
+
+                            new ProductVisit
+                            {
+                                id = 6,
+                                name = "Glace Magnum"
+                            }
                     }
                 }
             };

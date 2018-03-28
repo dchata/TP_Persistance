@@ -19,7 +19,7 @@ namespace API_Persistance.Controllers
         }
 
         [HttpGet]
-        [Produces(typeof(IEnumerable<Visit>))]
+        [Produces(typeof(List<Visit>))]
         public IActionResult GetVisits(string commercial)
         {
             return Ok(_visitService.GetVisits().Where(v => v?.commercial?.lastName.ToLower() == commercial?.ToLower()));

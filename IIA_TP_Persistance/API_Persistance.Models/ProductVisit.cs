@@ -28,6 +28,11 @@ namespace API_Persistance.Models
         {
 
         }
+        public ProductVisit(int id, string name)
+        {
+            this.id = id;
+            this.name = name;
+        }
         #endregion
     }
 }
