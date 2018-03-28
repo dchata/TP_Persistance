@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API_Persistance.Controllers
 {
-    [Produces("application/json")]
+    //[Produces("application/json")]
     [Route("api/visit")]
     public class VisitController : Controller
     {
@@ -23,7 +23,7 @@ namespace API_Persistance.Controllers
         [Produces(typeof(IEnumerable<Visit>))]
         public IActionResult GetVisits(string commercial)
         {
-            return Ok(_visitService.GetVisits().Where(v => v.commercial.lastName.ToLower() == commercial.ToLower()));
+            return Ok(_visitService.GetVisits().Where(v => v?.commercial?.lastName.ToLower() == commercial?.ToLower()));
         }
 
         [HttpPost]
