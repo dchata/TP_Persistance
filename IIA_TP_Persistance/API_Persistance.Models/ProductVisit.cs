@@ -10,6 +10,7 @@ namespace API_Persistance.Models
     {
         #region Properties
         private bool Missing;
+        private bool Saved;
         #endregion
 
         #region Access
@@ -18,6 +19,8 @@ namespace API_Persistance.Models
             get { return Missing; }
             set { Missing = value; }
         }
+
+        public bool saved { get => Saved; set => Saved = value; }
         #endregion
 
         #region Constructors

@@ -34,7 +34,7 @@ namespace API_Persistance.Controllers
 
             if (data != null)
             {
-                Visit visit = _visitService.GetVisits().Where(v => v?.commercial?.lastName.ToLower() == commercial?.ToLower()).FirstOrDefault();
+                Visit visit = _visitService.GetVisits().Where(v => v.id == visitId).FirstOrDefault();
                 result = _visitService.SetVisit(commercial, data, visit);
             }
 
