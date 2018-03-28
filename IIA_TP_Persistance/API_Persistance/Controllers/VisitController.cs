@@ -31,12 +31,20 @@ namespace API_Persistance.Controllers
         [Produces(typeof(string))]
         public IActionResult SetVisits(string commercial, [FromBody]string content)
         {
-            var result = _visitService.SetVisit(commercial, content);
+            string messageError = string.Empty;
+            Visit result = null;
+
+            if (content != null)
+                result = _visitService.SetVisit(commercial, content);
+            else
+                messageError = "Content null";
 
             if (result != null)
                 return Ok();
+            else
+                messageError = "Result null";
 
-            return BadRequest();
+            return BadRequest(messageError);
         }
     }
 }
