@@ -1,5 +1,6 @@
 ﻿using API_Persistance.Data;
 using API_Persistance.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -22,11 +23,29 @@ namespace API_Persistance
             return result;
         }
 
-        public virtual Visit SetVisit(string commercial, string content)
+        public virtual bool SetVisit(string commercial, string content, Visit visit)
         {
             var result = DecryptString(content, commercial);
-            
-            return new Visit();
+
+            ProductVisit visitProduct = JsonConvert.DeserializeObject<ProductVisit>(result);
+
+            if (visitProduct != null)
+            {
+                visit.products = new List<ProductVisit>
+                {
+                    new ProductVisit
+                    {
+                        name = visitProduct.name,
+                        price = visitProduct.price,
+                        facets = visitProduct.facets,
+                        rack = visitProduct.rack,
+                        missing = visitProduct.missing
+                    }
+                };
+                return true;
+            }
+            else
+                return false;
         }
 
         public static string DecryptString(string cipherText, string passPhrase)

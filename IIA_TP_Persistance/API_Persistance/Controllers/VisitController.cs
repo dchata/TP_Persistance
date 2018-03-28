@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API_Persistance.Controllers
 {
-    //[Produces("application/json")]
     [Route("api/visit")]
     public class VisitController : Controller
     {
@@ -29,22 +28,20 @@ namespace API_Persistance.Controllers
         [HttpPost]
         [Route("setVisit")]
         [Produces(typeof(string))]
-        public IActionResult SetVisits(string commercial, [FromBody]string content)
+        public IActionResult SetVisits(string commercial, int visitId, string data)
         {
-            string messageError = string.Empty;
-            Visit result = null;
+            bool result = false;
 
-            if (content != null)
-                result = _visitService.SetVisit(commercial, content);
-            else
-                messageError = "Content null";
+            if (data != null)
+            {
+                Visit visit = _visitService.GetVisits().Where(v => v?.commercial?.lastName.ToLower() == commercial?.ToLower()).FirstOrDefault();
+                result = _visitService.SetVisit(commercial, data, visit);
+            }
 
-            if (result != null)
+            if (result)
                 return Ok();
             else
-                messageError = "Result null";
-
-            return BadRequest(messageError);
+                return BadRequest();
         }
     }
 }
